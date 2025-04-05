@@ -8,12 +8,12 @@ import Dashboard from "./Dashboard.tsx";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/Spendly",
         element: <App />,
         // errorElement: <ErrorPage />,
     },
     {
-        path: "/dashboard",
+        path: "/Spendly/dashboard",
         element: <Dashboard />,
         // errorElement: <ErrorPage />,
     },
