@@ -130,13 +130,14 @@ function FrostedCard({
 }
 
 function CardBoard() {
-    const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState<string[]>([]);
 
-    const addCard = (text) => setCards([...cards, text]);
-    const removeCard = (index) => setCards(cards.filter((_, i) => i !== index));
+    const addCard = (text: string) => setCards([...cards, text]);
+    const removeCard = (index: number) =>
+        setCards(cards.filter((_, i) => i !== index));
 
     return (
-        <div className="bg-[#0e0e0e] p-6 rounded-xl w-full max-w-md text-white">
+        <div className="rounded-xl bg-white/5 shadow-lg ring-1 ring-black/5 border-[1px] dark:border-outline border-outline/30 p-6 text-black dark:text-white w-full max-w-md ">
             <h2 className="text-xl font-bold mb-4">🗂️ Task Board</h2>
             <CardForm onAdd={addCard} />
             <div className="space-y-3">
@@ -148,10 +149,10 @@ function CardBoard() {
     );
 }
 
-function CardForm({ onAdd }) {
+function CardForm({ onAdd }: { onAdd: (text: string) => void }) {
     const [input, setInput] = useState("");
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault();
         if (!input.trim()) return;
         onAdd(input);
@@ -177,7 +178,7 @@ function CardForm({ onAdd }) {
     );
 }
 
-function Card({ title, onRemove }) {
+function Card({ title, onRemove }: { title: string; onRemove: () => void }) {
     return (
         <>
             <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl p-4 shadow-md flex justify-between items-center">

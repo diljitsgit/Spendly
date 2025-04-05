@@ -5,8 +5,8 @@ const API_URL = "https://spendly-backend.onrender.com/"; // Replace with your Re
 export const chatService = {
     sendMessage: async (userId: 1, message: string) => {
         try {
-            console.log("Hello");
-            const response = await axios.post({ API_URL } + "/chat", {
+            console.log(API_URL + "chat");
+            const response = await axios.post(API_URL + "chat", {
                 user_id: userId,
                 message: message,
             });

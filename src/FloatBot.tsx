@@ -40,9 +40,9 @@ export default function FloatingChatbot() {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="absolute bottom-16 right-0 w-80 h-96 bg-[#1f1f1f] text-white rounded-xl shadow-xl flex flex-col overflow-hidden"
+                            className="absolute bottom-16 right-0 w-80 h-[30rem] bg-dbackground ring-black/5 border-[1px] dark:border-outline border-outline/30 text-white rounded-xl shadow-xl flex flex-col overflow-hidden"
                         >
-                            <div className="bg-[#111] p-3 font-semibold">
+                            <div className="bg-white/5 p-3 font-semibold">
                                 💬 Spendly Chat
                             </div>
                             <div className="flex-1 overflow-y-auto p-3 space-y-2 text-sm">
@@ -65,7 +65,7 @@ export default function FloatingChatbot() {
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     placeholder="Ask me anything..."
-                                    className="flex-1 px-3 py-2 rounded-lg bg-[#2c2c2c] text-white text-sm"
+                                    className="flex-1 px-3 py-2 rounded-lg bg-white/5 text-white text-sm"
                                 />
                                 <button
                                     onClick={handleSend}
