@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-dbackground: oklch(0.14 0.0152 284.32);
+    --color-lbackground: oklch(0.99 0 0);
+    --color-grayTxt: oklch(0.56 0 0);
+    --color-primary: oklch(0.83 0.3256 141.88);
+    --color-outline: oklch(0.27 0.0055 286.03);
+
+    --font-info: "REM";
+}
+
+@font-face {
+    font-family: REM;
+    src: url("/src/assets/REM.ttf") format("ttf");
+}
