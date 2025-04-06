@@ -61,6 +61,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <BrowserRouter basename="/Spendly">
             <Routes>
+                <Route path="/" element={<App />} />
                 <Route path="/Spendly" element={<App />} />
                 <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
