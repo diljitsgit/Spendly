@@ -35,11 +35,11 @@ import Dashboard from "./Dashboard";
 
 const router = createHashRouter([
     {
-        path: "/Spendly",
+        path: "/",
         element: <App />,
     },
     {
-        path: "/Spendly/dashboard",
+        path: "/dashboard",
         element: <Dashboard />,
     },
 ]);
