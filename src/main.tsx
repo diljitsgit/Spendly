@@ -59,11 +59,12 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        <BrowserRouter basename="/Spendly">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/Spendly" element={<App />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/Spendly/dashboard" element={<Dashboard />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
