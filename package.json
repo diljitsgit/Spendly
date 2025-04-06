@@ -1,5 +1,6 @@
 {
     "name": "spendly",
+    "homepage": "https://www.diljits.com/Spendly",
     "private": false,
     "version": "0.0.0",
     "type": "module",
